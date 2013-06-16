@@ -30,6 +30,7 @@ http://zinthedream.appspot.com
 * 支持评论
 * 支持用Google User Service 登陆
 * 页面比较简洁
+* 支持Markdown的语法 写作的时候可以用Markdown
 * 用Google Map显示浏览者的大体位置
 * 用Google GeoChart显示浏览者的地域分布
 ##技术细节
@@ -44,6 +45,7 @@ http://zinthedream.appspot.com
 * Googel Chart GeoChart
 * Bootstrap Notification
 * 支持RPCcall和REST SERVICE  输出JSON格式的数据
+* 支持Markdown的语法 写作的时候可以用Markdown 用 Markdown.js 和 to-markdown.js作为转化的工具
   可以用作iPhone 或者Android app 的后台… 
   [zths_iosapp.git](http://github.com/mengfeng/zths_iosapp.git) 是它的iPhone App 前端
 
