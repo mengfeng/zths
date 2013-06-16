@@ -31,7 +31,7 @@ http://zinthedream.appspot.com
 * 支持用Google User Service 登陆
 * 页面比较简洁
 * 用Google Map显示浏览者的大体位置
-
+* 用Google GeoChart显示浏览者的地域分布
 ##技术细节
 
 * 基于Google AppEngine 和 Python
@@ -41,6 +41,8 @@ http://zinthedream.appspot.com
   大多数的UI的逻辑都是在客户端用 jQuery 完成
 * HTML5 的 Geolocation 和 IPInfoDB 去获取浏览者的大致位置
 * Google Map API v3 来显示地图
+* Googel Chart GeoChart
+* Bootstrap Notification
 * 支持RPCcall和REST SERVICE  输出JSON格式的数据
   可以用作iPhone 或者Android app 的后台… 
   [zths_iosapp.git](http://github.com/mengfeng/zths_iosapp.git) 是它的iPhone App 前端
