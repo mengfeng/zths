@@ -1,0 +1,4 @@
+cron:
+- description: daily email about all dreams
+  url: /
+  schedule: every 12 hours

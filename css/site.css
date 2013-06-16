@@ -1,0 +1,53 @@
+.useractionsection{
+    font-size:80%;
+    
+}
+
+/*Overwriting the Bootstrap Classes*/
+.container-narrow {
+        margin: 0 auto;
+        max-width: 480px;
+        min-width: 480px;
+}
+.container-narrow > hr {
+        margin: 30px 0;
+}
+.nav{
+    margin-bottom:0px;
+}
+
+.nav-tabs > li > a , .nav-pills > li > a {
+padding-right: 5px;
+padding-left: 5px;
+margin-right: 2px;
+line-height: 14px;
+}
+
+.masthead {
+    margin-bottom: -25px;
+}
+
+.popover{
+    
+    max-width: 400px;
+}
+
+p {
+    line-height: 200%;
+}
+
+
+textarea#contactMessage{
+    height: 200px;
+    width: 270px;
+}
+
+form #frmcontact{
+
+    margin: 0 0 0 0px;
+ 
+}
+.formbuttons {
+    float:right;
+}
+

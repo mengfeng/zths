@@ -1,0 +1,41 @@
+.record_comment_text > blockquote > p {
+    font-size:95%;
+}
+
+
+.record, .iframe_message{
+    margin: 0 auto;
+    text-align:left;
+    
+}
+
+.record_actionbuttons{
+    margin-right:0px;
+    margin-top:-15px;
+    margin-bottom:10px;
+    text-align:right;
+}
+
+.record_image{
+    margin: 0 auto;
+    text-align:center;
+}
+
+.toprightactionbuttons, .useractionbuttons{
+    margin-right:0px;
+    text-align:right;
+    margin-bottom:-10px;
+}
+
+.toprightactionbuttons{
+    
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+textarea#description{
+    height: 400px;
+
+}
+
+

@@ -1,0 +1,90 @@
+{% extends 'templates/base.html'%}
+{% block TITLE %}{{ page_title }}{% endblock %}
+{% block SUBTITLE %}{{ page_title }}{%endblock%}
+{% block MAINCONTENT %}
+<link rel="stylesheet" type="text/css" href="/css/zpic_site.css" />
+
+{%if user_env_vars.is_admin %}
+<div class='toprightactionbuttons'><a id='btnrecordtrigger'><i class='icon-plus'></i></a></div>
+<div id="recordModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="PicModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="recordModalLabel">Record Down A PicLife</h3>
+  </div>
+  <div class="modal-body">
+    <form id='frmrecord' accept-charset="utf-8" action='{{upload_url}}' method='post' enctype="multipart/form-data">
+		<div class="input-append">
+		  <input type='file' name='record_file' id='record_file'/>
+		  <button class='btn btn-primary' id='btnupload'>Upload</button>
+		  <span id="ajaximage"></span>
+		</div>
+		<div id='fileuploadiframe' class='iframe_message'></div>
+		<textarea name="description" id="description"></textarea>
+
+	</form>
+	<div id='record_info'></div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" id='recorddownmoment'>Save</button><span id="ajaximage_save"></span>
+  </div>
+</div>
+{% endif %}
+
+<div class='records'>
+	{%for record in record_infos.results%}
+		<div class='record'>
+			<div class='record_image'>
+			    <img src='{{record.image_url | safe}}'/>
+			</div>
+			<div class='record_content'>
+			    <blockquote>
+			     <div class='record_content_body'>{{record.content | safe}}</div>
+			     <small>{{record.author}}@{{record.date.strftime("%b %d,%Y %H:%M:%S")}}</small>
+			    </blockquote>
+
+				
+			</div>
+			<div class='record_info'>
+				<input type='hidden' name='record_key' id='record_key' value='{{record.key()}}'/>
+			</div>
+		    
+			<div class='record_actionbuttons'>
+				<li class='icon-comment' id='action_button_comment'></li>
+				{%if user_env_vars.is_admin %}
+					<li class='icon-edit' id='action_button_edit'></li>
+					<li class='icon-trash' id='action_button_delete'></li>
+				{%endif%}
+			</div>
+			
+			<div class='record_comment'>
+			    <div class='record_comment_content'></div>
+			    <div class='record_comment_input'></div>
+			</div>
+			
+		</div>
+		
+	{%endfor%}
+</div>
+<div class="pagination pagination-centered pagination-small" id="pager">
+    <ul>
+      {%if record_infos.prev_page %}	
+      	<li><a href="/?pageno={{record_infos.prev_page}}">«</a></li>
+      {%endif%}
+      {%for pageno in record_infos.page_numbers%}
+      	<li><a href='/?pageno={{pageno}}'>{{pageno}}</a></li>
+      {%endfor%}
+      {%if record_infos.next_page %}
+      	<li><a href="/?pageno={{record_infos.next_page}}">»</a></li>
+      {%endif%}
+    </ul>
+</div>
+
+
+
+{% endblock%}
+{% block ADDTIONAL_SCRIPTS %}
+<script src="/js/markdown.js" type="text/javascript"></script>
+<script src="/js/to-markdown.js" type="text/javascript"></script>
+<script src="/js/zpic.js" type="text/javascript"></script>
+{% endblock %}

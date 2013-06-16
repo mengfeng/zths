@@ -1,0 +1,26 @@
+indexes:
+- kind: Dream
+  properties:
+  - name: author
+  - name: date
+    direction: desc
+- kind: ZPicLife
+  properties:
+  - name: author
+  - name: date
+    direction: desc
+- kind: Comment
+  properties:
+  - name: topic_key
+  - name: created
+    direction: desc
+
+- kind: RequestorLocation
+  properties:
+  - name: ip_address
+  - name: date
+    direction: desc
+  - name: updated
+    direction: desc
+  - name: location_country
+  - name: requests_count
