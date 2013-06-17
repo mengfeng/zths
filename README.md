@@ -73,3 +73,7 @@ http://zinthedream.appspot.com
 * base.html
 * zdream.html or zpic.html or ....相互独立
 * robots.txt
+
+###TO-DOs
+* Issues with the Comments Icon:
+  * Comment icon are not responding to the onClick event for the infinite-scroll loaded records.

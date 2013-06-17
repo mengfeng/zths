@@ -37,10 +37,3 @@ textarea#description{
     height: 400px;
 
 }
-
-#backtotop{
-    position: fixed;
-    right: 5px;
-    bottom: 30px;
-    display: none;
-}

@@ -10,3 +10,43 @@
     overflow:hidden;
     padding: 20px;
 }
+
+#backtotop{
+    position: fixed;
+    right: 5px;
+    bottom: 15px;
+    display: none;
+}
+
+#backtotop a:hover {
+    opacity: 0.7;
+}
+
+#infscr-loading{
+    visibility: hidden;
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    left:45%;
+    bottom:40px;
+    width: 200px;
+    padding:10px;
+    background: #000;
+    opacity: 0.7;
+    color: #FFF;
+
+}
+
+#pager{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
