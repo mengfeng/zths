@@ -24,7 +24,7 @@ line-height: 14px;
 }
 
 .masthead {
-    margin-bottom: -25px;
+   margin: 0 20px;
 }
 
 .popover{
@@ -51,3 +51,6 @@ form #frmcontact{
     float:right;
 }
 
+#site_title{
+    margin-bottom: -15px;
+}

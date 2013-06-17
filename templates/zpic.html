@@ -3,6 +3,7 @@
 {% block SUBTITLE %}{{ page_title }}{%endblock%}
 {% block MAINCONTENT %}
 <link rel="stylesheet" type="text/css" href="/css/zpic_site.css" />
+<link rel="stylesheet" type="text/css" href="/css/masonry.css" />
 
 {%if user_env_vars.is_admin %}
 <div class='toprightactionbuttons'><a id='btnrecordtrigger'><i class='icon-plus'></i></a></div>
@@ -86,5 +87,7 @@
 {% block ADDTIONAL_SCRIPTS %}
 <script src="/js/markdown.js" type="text/javascript"></script>
 <script src="/js/to-markdown.js" type="text/javascript"></script>
+<script src="/js/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/js/jquery.infinitescroll.min.js" type="text/javascript"></script>
 <script src="/js/zpic.js" type="text/javascript"></script>
 {% endblock %}

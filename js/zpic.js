@@ -282,7 +282,7 @@ $(document).ready(function(){
 
         record_comment_content.find(".record_comment_text").css({
             'width': function(){
-                return $('.container-narrow').width()*0.7;
+                return $(".record").width();
             },
             'margin': '0 auto',
             'text-align':'left',
@@ -292,11 +292,14 @@ $(document).ready(function(){
 
         record_comment_input.find(".record_comment_inputbox").css({
             'width': function(){
-                return $('.container-narrow').width()*0.8-$('#comment_author').width()-$('#comment_action').width();
+                return $('.record').width()*0.8-$('#comment_author').width()-$('#comment_action').width();
             },
             'margin': '0 auto',
 
         });
+
+        //reload the grid
+        load_masonry_layout();
 
         record_comment_input.find(".record_comment_inputbox").focus();
 
@@ -309,11 +312,15 @@ $(document).ready(function(){
                 record_comment_input.find(".record_comment_inputbox").val("");
                 post_record_comment(currentObj,topic_key,comment_content,author);
             }
+            //reload the grid
+            load_masonry_layout();
         });
 
         var reset_comment_box=function(){
             record_comment_content.html("");
             record_comment_input.html("");
+            //reload the grid 
+            load_masonry_layout();
         };
 
 
@@ -351,5 +358,21 @@ $(document).ready(function(){
         return html;
     };
     
+
+    var load_masonry_layout=function(){
+       var $container=$('.records');
+
+       $container.imagesLoaded(function(){
+           $container.masonry({
+                itemSelector : '.record',
+           });
+       });
+
+       console.log("masonry completed...");
+    
+    };
+
+
     pageSetup();
+    load_masonry_layout();
 });
