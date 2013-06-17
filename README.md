@@ -77,3 +77,5 @@ http://zinthedream.appspot.com
 ###TO-DOs
 * Issues with the Comments Icon:
   * Comment icon are not responding to the onClick event for the infinite-scroll loaded records.
+* Enable Cache for JS for Google Front End to improve performance under poor internet condition
+
