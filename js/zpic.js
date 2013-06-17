@@ -368,8 +368,54 @@ $(document).ready(function(){
            });
        });
 
-       console.log("masonry completed...");
-    
+       //console.log("masonry completed...");
+        $container.infinitescroll({
+            navSelector : '#pager',
+            nextSelector : '#pager a:last',
+            itemSelector : '.record',
+            loading :{
+                img:'http://i.imgur.com/6RMhx.gif',
+                loadingText: 'loading... ...',
+                finishedMsg: 'loading completed',
+            
+            }
+        
+        },
+        //trigger masonry as a callback
+        function( newElements){
+            var $newElems=$(newElements).css({opacity:0});
+            $newElems.imagesLoaded(function(){
+                $newElems.animate({opacity:1});
+                $container.masonry('appended',$newElems, true);
+            });
+        
+        });
+
+        var back_to_top_init=function(){
+            var pxShow=300;
+            var fadeInTime=1000;
+            var fadeOutTime=1000;
+            var scrollSpeed=1000;
+            var $backtotop=$("#backtotop");
+            $(window).scroll(function(){
+                if($(window).scrollTop() >=pxShow){
+                    $backtotop.fadeIn(fadeInTime);
+                }else{
+                    $backtotop.fadeOut(fadeOutTime);
+                }
+            
+            });
+
+            $backtotop.click(function(){
+                $('html, body').animate({
+                    scrollTop: 0,
+                },
+                    scrollSpeed
+                );
+                return false;
+            });
+        
+        }();
     };
 
 
