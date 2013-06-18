@@ -78,5 +78,4 @@ http://zinthedream.appspot.com
 * robots.txt
 
 ###TO-DOs
-* Enable Cache for JS for Google Front End to improve performance under poor internet condition
 

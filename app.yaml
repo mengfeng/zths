@@ -4,6 +4,8 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+default_expiration: "7d"
+
 handlers:
   
 - url: /js
@@ -22,3 +24,5 @@ libraries:
   
 builtins:
 - remote_api: on
+- appstats: on
+- admin_redirect: on
