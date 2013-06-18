@@ -26,6 +26,16 @@ var init_base_section=function(){
         title:'Requestor Maps',
         placement:'bottom',
     });
+    $('#link_stats').tooltip({
+        title:'App Stats',
+        placement:'bottom',
+    });
+
+    $('#link_admin').tooltip({
+        title:'App Admin',
+        placement:'bottom',
+    });
+
 
     /*Prepare for the Contact US action*/
     $('#link_contact').tooltip({

@@ -30,7 +30,10 @@
 				<!--<li><a id='link_rss' href="/rss"><i class='icon-signal'></i></a></li>-->
 				<li><a id='link_login' href="{{user_env_vars.action_url}}"><i class='icon-off'></i></a></li>
 				{%if user_env_vars.user%}
-				<li><a class='useractionsection'><i class='icon-user'></i><i id='user_nickname'>{{user_env_vars.user_nickname}}</i></a></li>
+				
+                <li><a id='link_stats' href="/_ah/stats"><i class='icon-info-sign'></i></a></li>
+                <li><a id='link_admin' href="/_ah/admin"><i class='icon-wrench'></i></a></li>
+                <li><a class='useractionsection'><i class='icon-user'></i><i id='user_nickname'>{{user_env_vars.user_nickname}}</i></a></li>
 				{%endif%}
 			</ul>
 			<h3 id="site_title" class="muted">{%block SUBTITLE %}{% endblock%}</h3>
@@ -43,7 +46,7 @@
 	<script src="/js/jquery.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/js/bootstrap-notify.js" type="text/javascript"></script>
-	<script src="/js/base.js" type="text/javascript"></script>
+	<script src="/js/base.js?v=1.0" type="text/javascript"></script>
     {% block ADDTIONAL_SCRIPTS %}{% endblock %}
 	
 </body>
