@@ -1,9 +1,9 @@
 .container-narrow{
-    max-width: 900px;
+   /* max-width: 900px; */
 }
 
 .record {
-    width: 410px;
+    /*width: 410px;*/
     float: left;
     clear:both;
     position:relative;
