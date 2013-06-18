@@ -33,6 +33,8 @@ http://zinthedream.appspot.com
 * 支持Markdown的语法 写作的时候可以用Markdown
 * 用Google Map显示浏览者的大体位置
 * 用Google GeoChart显示浏览者的地域分布
+* Pinterest Like Dynamic Grid Layout
+* Infinite Scroll
 ##技术细节
 
 * 基于Google AppEngine 和 Python
@@ -44,11 +46,12 @@ http://zinthedream.appspot.com
 * Google Map API v3 来显示地图
 * Googel Chart GeoChart
 * Bootstrap Notification
+* Using jQuery Masonry to implement the Pinterest Like Dynamic Grid Layout
+* Using jQuery Infinite-Scroll to implement the auto-page-loading
 * 支持RPCcall和REST SERVICE  输出JSON格式的数据
 * 支持Markdown的语法 写作的时候可以用Markdown 用 Markdown.js 和 to-markdown.js作为转化的工具
   可以用作iPhone 或者Android app 的后台… 
   [zths_iosapp.git](http://github.com/mengfeng/zths_iosapp.git) 是它的iPhone App 前端
-
 * 前后端的框架也抽的差不多了 需要的话可以很方便的搭建一个类似的站
 
 ##文件的架构
@@ -64,7 +67,7 @@ http://zinthedream.appspot.com
 ###重要的css
 * site.css  宏观的style
 * zpics_site.css or zdreams_site.css or .....相互独立
-
+* masonry.css 控制Dynamic Grid Layout + Infinite-Scroll 的外观
 ###重要的js
 * base.js
 * zpics.js or zdreams.js or ....相互独立
@@ -75,7 +78,5 @@ http://zinthedream.appspot.com
 * robots.txt
 
 ###TO-DOs
-* Issues with the Comments Icon:
-  * Comment icon are not responding to the onClick event for the infinite-scroll loaded records.
 * Enable Cache for JS for Google Front End to improve performance under poor internet condition
 
