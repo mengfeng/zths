@@ -80,4 +80,4 @@ http://zinthedream.appspot.com
 ###TO-DOs
 * Add the slideshow for all the records.
 * Rewrite the whole site with ruby and deploy using heroku
-
+* Add the button for share-share with Twitter,Faceback,微博
