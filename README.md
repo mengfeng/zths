@@ -78,4 +78,6 @@ http://zinthedream.appspot.com
 * robots.txt
 
 ###TO-DOs
+* Add the slideshow for all the records.
+* Rewrite the whole site with ruby and deploy using heroku
 

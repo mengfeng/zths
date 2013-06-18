@@ -374,7 +374,7 @@ var load_masonry_layout=function(){
     });
 
     var back_to_top_init=function(){
-        var pxShow=300;
+        var pxShow=500;
         var fadeInTime=1000;
         var fadeOutTime=1000;
         var scrollSpeed=1000;
