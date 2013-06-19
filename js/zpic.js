@@ -407,7 +407,7 @@ var load_masonry_layout=function(record_width,container_width){
             img: 'http://i.imgur.com/6RMhx.gif',
             msgText: 'loading... ...',
             finishedMsg: 'loading completed'
-        }
+        },
         animate: true,
         extraScrollPx: 100,
         bufferPx: 20
