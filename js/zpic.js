@@ -93,13 +93,13 @@ var init_action_buttons=function(html_obj){
 
     });
 
-   /*
+   
    $(".record_image img").click(function(){
         var $current_image=$(this);
         init_records_slideshow($current_image);
    });
 
-   */
+   
 
 }; 
     
@@ -429,23 +429,21 @@ var load_masonry_layout=function(record_width,container_width){
  };
 var unload_masonry_layout=function(){
     $container=$('.records');
-    try{
-        $container.masonry('destroy');
-    }catch(e){
-    }
-    try{
-        $container.infinitescroll('destroy');
-    }catch(e){
+    var msnry=$container.data('masonry');
+    if(msnry !=null) msnry.destroy();
+    //$container.masonry('destroy');
+    $container.infinitescroll('destroy');
     
-    }
     $(".record").css({'width':480});
     $(".container-narrow").css({'max-width':520});
 
 }
 var init_records_slideshow=function(current_image){
-
-   var $container=$('.records');
    unload_masonry_layout();
+    //deregister the image unclick event:
+    $(".record_image img").unbind();
+    
+
 };
         
   
