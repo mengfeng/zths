@@ -93,10 +93,13 @@ var init_action_buttons=function(html_obj){
 
     });
 
+   /*
    $(".record_image img").click(function(){
         var $current_image=$(this);
         init_records_slideshow($current_image);
    });
+
+   */
 
 }; 
     
