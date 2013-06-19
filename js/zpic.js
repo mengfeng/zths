@@ -1,7 +1,5 @@
 $(document).ready(function(){
-        
-
-var init_record_modal=function(){
+ var init_record_modal=function(){
     $('#btnrecordtrigger').click(function(){
 
         resetModal();
@@ -62,15 +60,16 @@ var init_record_modal=function(){
 
        });
 };
-var init_action_buttons=function(){
-
-   $('li#action_button_delete').click(function(){
+var init_action_buttons=function(html_obj){
+   //console.log("re-initializing the action button for newly loaded elements..");
+   var $selector=$(html_obj);
+   $('i#action_button_delete',$selector).click(function(){
 
        confirmPrompt($(this),"Confirm Record Delete","Are you sure to delete the current record?","Cancel","Confirm",removeCurrentRecord);
     });
     
 
-    $('li#action_button_comment').click(function(){
+    $('i#action_button_comment',$selector).click(function(){
         var currentObj=$(this);
         check_reload_comments(currentObj);
 
@@ -78,7 +77,7 @@ var init_action_buttons=function(){
     });
 
 
-    $('li#action_button_edit').click(function(){
+    $('i#action_button_edit',$selector).click(function(){
         var current_record_content=$(this).parents('div.record').find('.record_content_body').html();
         var current_record_key=$(this).parents('div.record').find('#record_key').val();
         var current_record_image_url=$(this).parents('div.record').children('.record_image').html();
@@ -94,11 +93,13 @@ var init_action_buttons=function(){
 
     });
 
-
+   /*
    $(".record_image img").click(function(){
         var $current_image=$(this);
         init_records_slideshow($current_image);
-   }); 
+   });
+
+   */
 }; 
     
 var resetModal=function(){
@@ -292,7 +293,7 @@ var prepare_comment_box=function(currentObj,json_msg){
             return $(".record").width();
         },
         'margin': '0 auto',
-        'text-align':'left',
+        'text-align':'left'
 
 
     });
@@ -301,7 +302,7 @@ var prepare_comment_box=function(currentObj,json_msg){
         'width': function(){
             return $('.record').width()*0.8-$('#comment_author').width()-$('#comment_action').width();
         },
-        'margin': '0 auto',
+        'margin': '0 auto'
 
     });
 
@@ -362,7 +363,7 @@ var back_to_top_init=function(){
 
     $backtotop.click(function(){
         $('html, body').animate({
-            scrollTop: 0,
+            scrollTop: 0
         },
             scrollSpeed
         );
@@ -381,9 +382,10 @@ var init_page_layout=function(){
        }
    };
    set_maonry_values();
-   $(window).resize(function(){
+  /* $(window).resize(function(){
         set_maonry_values();
    });
+  */
 };        
 var load_masonry_layout=function(record_width,container_width){
    var $container=$('.records');
@@ -393,11 +395,12 @@ var load_masonry_layout=function(record_width,container_width){
 
    $container.imagesLoaded(function(){
        $container.masonry({
-            itemSelector : '.record',
+            itemSelector : '.record'
        });
    });
 
    //console.log("masonry completed...");
+   
     $container.infinitescroll({
         navSelector : '#pager',
         nextSelector : '#pager a:last',
@@ -405,7 +408,7 @@ var load_masonry_layout=function(record_width,container_width){
         loading :{
             img:'http://i.imgur.com/6RMhx.gif',
             loadingText: 'loading... ...',
-            finishedMsg: 'loading completed',
+            finishedMsg: 'loading completed'
         
         }
     
@@ -415,11 +418,11 @@ var load_masonry_layout=function(record_width,container_width){
         var $newElems=$(newElements).css({opacity:0});
         $newElems.imagesLoaded(function(){
             $newElems.animate({opacity:1});
-            $container.masonry('appended',$newElems, true);
+            $container.masonry('appended',$newElems);
         });
-        init_action_buttons(); 
+        init_action_buttons(newElements); 
     });
-
+    
  };
 var unload_masonry_layout=function(){
     $container=$('.records');
@@ -457,7 +460,7 @@ var markdowntohtml=function(text){
 var application_url='/zpic';
 init_base_section(); //function is defined in base.js
 init_record_modal();
-init_action_buttons(); 
+init_action_buttons($(document)); 
 //load_masonry_layout(410,900);
 init_page_layout();
 back_to_top_init();

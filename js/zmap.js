@@ -8,7 +8,7 @@ $(document).ready(function(){
                 },
                 'height':function(){
                   return $('.container-narrow').width();  
-                },
+                }
             });
             
         }();
@@ -17,7 +17,7 @@ $(document).ready(function(){
               center: new google.maps.LatLng(25.0, 103.0),
               zoom: 3,
               mapTypeId: google.maps.MapTypeId.ROADMAP,
-              streetViewControl: true,
+              streetViewControl: true
             };
         google.maps.visualRefresh=true;
         var map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
@@ -59,7 +59,7 @@ $(document).ready(function(){
                           "\nCity: "+requestor_location.location_city+
                           "\nAddress: "+requestor_location.formatted_address+
                           "\nBrowser Type: "+requestor_location.browser_type
-                          ,
+                          
 
 
                       });
@@ -91,7 +91,7 @@ $(document).ready(function(){
                 },
                 'height':function(){
                   return $('.container-narrow').width();  
-                },
+                }
             });
             
         }();
@@ -149,7 +149,7 @@ $(document).ready(function(){
                     colorAxis:{colors:['green','red']},
                     magnifyingGlass:{enable: true,zoomFactor:100},
                     displayMode: 'regions',
-                    region: 'world',
+                    region: 'world'
                 };
                 var chart=new google.visualization.GeoChart(document.getElementById('stats_map'));
                 chart.draw(data,options);
@@ -162,7 +162,7 @@ $(document).ready(function(){
                     colorAxis:{colors:['green','red']},
                     magnifyingGlass:{enable: true,zoomFactor:100},
                     displayMode: 'regions',
-                    region: 'SG',
+                    region: 'SG'
                 };
                 chart=new google.visualization.GeoChart(document.getElementById('sg_stats_map'));
                 chart.draw(data,options);

@@ -1,46 +1,27 @@
 var init_base_section=function(){
     $('#link_home').tooltip({
         title:'Home',
-        placement:'bottom',
+        placement:'bottom'
     });
-    /*$('#link_zpic').tooltip({
-        title:'Z Pics',
-        placement:'bottom',
-    });
-    */
-    /*
-    $('#link_zdream').tooltip({
-        title:'Z Dreams',
-        placement:'bottom',
-    });
-    $('#link_zmsg').tooltip({
-        title:'Leave Z A Message',
-        placement:'bottom',
-    });
-    $('#link_zthought').tooltip({
-        title:'Z Thoughts',
-        placement:'bottom',
-    });
-    */
     $('#link_zmap').tooltip({
         title:'Requestor Maps',
-        placement:'bottom',
+        placement:'bottom'
     });
     $('#link_stats').tooltip({
         title:'App Stats',
-        placement:'bottom',
+        placement:'bottom'
     });
 
     $('#link_admin').tooltip({
         title:'App Admin',
-        placement:'bottom',
+        placement:'bottom'
     });
 
 
     /*Prepare for the Contact US action*/
     $('#link_contact').tooltip({
         title:'Contact US',
-        placement:'bottom',
+        placement:'bottom'
     });
     $('#link_contact').popover({
         title:'Contact Z',
@@ -70,29 +51,10 @@ var init_base_section=function(){
     
         //console.log(popover_content);
            return popover_content;
-        },
+        }
     });
 
     
-    /*
-    $('#link_contact').click(function(e){
-        var showModal=function(){
-           //console.log("onClick Function happens before the href");
-            $('#contactModal').modal({
-                  backdrop: 'static',
-                  keyboard: false       
-            }).css({
-
-                  });
-           
-           });
-
-        }();
-
-
-
-    });
-    */
     /*
     $('#link_rss').tooltip({
         title:'RSS Subscription',
@@ -101,7 +63,7 @@ var init_base_section=function(){
     */
     $('#link_login').tooltip({
         title:'Login/out',
-        placement:'bottom',
+        placement:'bottom'
     });
 };
 
@@ -120,14 +82,14 @@ var sendContactEmail=function(){
                   var jsonObj=$.parseJSON(json_msg);
                   if(jsonObj.status=="ok"){
                         $("#notification").notify({
-                            message : {text: jsonObj.message},
+                            message : {text: jsonObj.message}
 
                         }).show();
 
                   }
                   if(jsonObj.status!="ok"){
                         $("#notification").notify({
-                            message : {text: jsonObj.message},
+                            message : {text: jsonObj.message}
 
                         }).show();
 
@@ -140,7 +102,7 @@ var sendContactEmail=function(){
  
     $("#link_contact").popover("hide");
 
-}
+};
 var get_geolocation=function(){
         
     var browser_type=navigator.userAgent;
@@ -167,7 +129,7 @@ var get_geolocation=function(){
 
             var process_position_error_callback=function(comment){
                 get_geolocation_by_ip(comment);
-            }
+            };
 
             var process_position=function(position){
                     latitude=""+position.coords.latitude;
@@ -195,7 +157,7 @@ var get_geolocation=function(){
             };
 
             navigator.geolocation.getCurrentPosition(process_position,process_error);
-    }
+    };
     
     var get_geolocation_by_ip=function(comment){
         var dispatcher="get_by_ip";
@@ -209,7 +171,7 @@ var get_geolocation=function(){
 
             }
         });
-    }
+    };
     
     
     if(navigator.geolocation){

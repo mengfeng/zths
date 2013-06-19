@@ -1,8 +1,10 @@
 {% extends 'templates/base.html'%}
 {% block TITLE %}{{ page_title }}{% endblock %}
+{% block ADDITIONAL_CSS %}
+    <link rel="stylesheet" type="text/css" href="/css/zmap_site.css" />
+{%endblock%}
 {% block SUBTITLE %}{{ page_title }}{%endblock%}
 {% block MAINCONTENT %}
-<link rel="stylesheet" type="text/css" href="/css/zmap_site.css" />
 <div id="requestor_stats"></div>
 <div id="stats_map"></div>
 <div id="sg_requestor_stats"></div>
