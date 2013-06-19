@@ -405,12 +405,12 @@ var load_masonry_layout=function(record_width,container_width){
         navSelector : '#pager',
         nextSelector : '#pager a:last',
         itemSelector : '.record',
-        loading :{
-            img:'http://i.imgur.com/6RMhx.gif',
-            loadingText: 'loading... ...',
-            finishedMsg: 'loading completed'
-        
-        }
+        loadingImg:'http://i.imgur.com/6RMhx.gif',
+        loadingText: 'loading... ...',
+        donetext: 'loading completed',
+        animate: true,
+        extraScrollPx: 100,
+        bufferPx: 20
     
     },
     //trigger masonry as a callback
