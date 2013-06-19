@@ -103,7 +103,7 @@ var init_base_section=function(){
         title:'Login/out',
         placement:'bottom',
     });
-}();
+};
 
 var sendContactEmail=function(){
     var message=$("#contactMessage").val();
@@ -220,5 +220,7 @@ var get_geolocation=function(){
     }
     
     
-}();
+};
+
+
 

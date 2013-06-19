@@ -455,12 +455,14 @@ var markdowntohtml=function(text){
 };
 
 var application_url='/zpic';
-
+init_base_section(); //function is defined in base.js
 init_record_modal();
 init_action_buttons(); 
 //load_masonry_layout(410,900);
 init_page_layout();
 back_to_top_init();
+
+get_geolocation(); //function is defined in base,js
 
 
 });
