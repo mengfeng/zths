@@ -93,13 +93,13 @@ var init_action_buttons=function(html_obj){
 
     });
 
-   
+   /*
    $(".record_image img").click(function(){
         var $current_image=$(this);
         init_records_slideshow($current_image);
    });
 
-   
+   */
 
 }; 
     
@@ -442,7 +442,12 @@ var init_records_slideshow=function(current_image){
    unload_masonry_layout();
     //deregister the image unclick event:
     $(".record_image img").unbind();
-    
+    //addClass for the items to be displayed
+    $(".records").addClass("carousel slide");
+    $(".record").wrapAll("<div class='carousel-inner'/>");
+    $(".record").addClass("item");
+    $(".records").carousel();
+
 
 };
         
