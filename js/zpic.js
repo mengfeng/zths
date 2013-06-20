@@ -93,13 +93,11 @@ var init_action_buttons=function(html_obj){
 
     });
 
-   /*
    $(".record_image img").click(function(){
         var $current_image=$(this);
         init_records_slideshow($current_image);
    });
 
-   */
 
 }; 
     
@@ -444,8 +442,18 @@ var init_records_slideshow=function(current_image){
     $(".record_image img").unbind();
     //addClass for the items to be displayed
     $(".records").addClass("carousel slide");
+    //decrorating the items
     $(".record").wrapAll("<div class='carousel-inner'/>");
     $(".record").addClass("item");
+
+    //formatting the indicators:
+    $(".carousel-inner").before("<ol class='carousel-indicators'></ol>");
+    $.each($(".record"),function(index,value){
+        //$("ol.carousel-indicators").html("");
+        $("ol.carousel-indicators").append("<li data-target='.records' data-slide-to='"+index+"'></li>");
+    });
+
+
     $(".records").carousel();
 
 
