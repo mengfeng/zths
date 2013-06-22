@@ -30,7 +30,7 @@ line-height: 14px;
 
 .popover{
     
-    max-width: 400px;
+    width: 300px;
 }
 
 p {
@@ -40,7 +40,7 @@ p {
 
 textarea#contactMessage{
     height: 200px;
-    width: 270px;
+    min-width: 260px;
 }
 
 form #frmcontact{
