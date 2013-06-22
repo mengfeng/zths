@@ -30,13 +30,16 @@ line-height: 14px;
 
 .popover{
     
-    width: 300px;
+    max-width: 300px;
 }
 
 p {
     line-height: 200%;
 }
 
+#contactModal{
+    max-width : 300px;
+}
 
 textarea#contactMessage{
     height: 200px;
