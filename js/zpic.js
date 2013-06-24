@@ -411,7 +411,7 @@ var load_masonry_layout=function(record_width,container_width){
         },
         animate: true,
         extraScrollPx: 0,
-        bufferPx: 20
+        bufferPx: 0
     
     },
     //trigger masonry as a callback
