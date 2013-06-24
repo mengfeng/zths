@@ -35,6 +35,11 @@ line-height: 14px;
 
 blockquote p {
     margin-top: 2em;
+    font-size: 14px;
+}
+
+blockquote h3 {
+    font-size: 14px;
 }
 
 #contactModal{
