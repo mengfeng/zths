@@ -409,7 +409,7 @@ var load_masonry_layout=function(record_width,container_width){
             msgText: 'loading... ...',
             finishedMsg: 'loading completed'
         },
-        animate: true,
+        animate: false,
         extraScrollPx: 0,
         bufferPx: 0
     

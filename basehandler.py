@@ -446,6 +446,15 @@ class Location(BaseHandler):
             requestor_location.requests_count=1
         else:
             requestor_location.requests_count+=1
+            requestor_location.browser_type=location_info.get('browser_type')
+            requestor_location.longitude=location_info.get('longitude')
+            requestor_location.latitude=location_info.get('latitude')
+            requestor_location.location_country=location_info.get('location_country')
+            requestor_location.location_city=location_info.get('location_city')
+            requestor_location.comment=location_info.get('comment')
+            requestor_location.ip_address=location_info.get('ip_address')
+            requestor_location.formatted_address=location_info.get('formatted_address')
+            requestor_location.locating_method=location_info.get('locating_method')
         
         requestor_location.put()
         
