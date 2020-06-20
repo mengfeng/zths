@@ -11,13 +11,9 @@ http://zinthedream.appspot.com
 分为 
 
 * [ZPics --图片记录生活][zpic] 
-* [ZDreams--记录梦境][zdream] 
-* [ZThoughts --记录感想][zthought]
 * [ZMap —Requestor Location][zmap]
 
 [zpic]: http://zinthedream.appspot.com/zpic
-[zdream]: http://zinthedream.appspot.com/zdream
-[zthought]: http://zinthedream.appspot.com/zthought
 [zmap]:http://zinthedream.appspot.com/zmap
 
 
@@ -63,19 +59,6 @@ http://zinthedream.appspot.com
 * models.py
 * main.py
 * zpics.py or zdream.py or zthought.py or zmsg.py or zmap.py 他们是相互独立的
-
-###重要的css
-* site.css  宏观的style
-* zpics_site.css or zdreams_site.css or .....相互独立
-* masonry.css 控制Dynamic Grid Layout + Infinite-Scroll 的外观
-###重要的js
-* base.js
-* zpics.js or zdreams.js or ....相互独立
-
-###重要的template
-* base.html
-* zdream.html or zpic.html or ....相互独立
-* robots.txt
 
 ###TO-DOs
 * Add the slideshow for all the records.
